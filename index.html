@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown 转 PDF 工具</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Markdown 转 PDF 工具</h1>
+            <p>粘贴 Markdown 内容或上传 .md 文件，然后导出为 PDF</p>
+        </header>
+
+        <div class="controls">
+            <div class="file-upload">
+                <label for="fileInput" class="custom-file-upload">
+                    📂 选择 Markdown 文件
+                </label>
+                <input type="file" id="fileInput" accept=".md,.markdown,.txt">
+            </div>
+            <button id="convertBtn" class="btn primary">📄 导出为 PDF</button>
+        </div>
+
+        <div class="main-content">
+            <div class="editor-section">
+                <h2>输入/编辑</h2>
+                <textarea id="markdownInput" placeholder="# 在这里输入 Markdown 内容..."></textarea>
+            </div>
+            <div class="preview-section">
+                <h2>预览</h2>
+                <div id="previewContent" class="markdown-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
